@@ -13,7 +13,7 @@ namespace Delagram.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201605260124160_InitialCreate"; }
+            get { return "201606020000303_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

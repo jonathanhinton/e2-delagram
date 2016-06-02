@@ -84,5 +84,23 @@ namespace Delagram.Tests.DAL
 
             Assert.AreEqual(1, Repo.GetPostCount());
         }
+
+        [TestMethod]
+        public void RepoEnsureICanGetPosts()
+        {
+            // Arrange
+            Post post1 = new Post { PostId = 1, Caption = "Hello Kitty", ImageUrl = "https://placekitten.com/400/300" };
+            Post post2 = new Post { PostId = 2, Caption = "Hello Kitty", ImageUrl = "https://placekitten.com/200/150" };
+
+            post_datasource.Add(post1);
+            post_datasource.Add(post2);
+            ConnectMocksToDatasource();
+
+            // Act
+            List<Post> posts = Repo.GetPosts();
+
+            // Assert
+            Assert.AreEqual(2, posts.Count);
+        }
     }
 }
