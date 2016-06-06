@@ -12,11 +12,14 @@ namespace Delagram.Tests.DAL
     [TestClass]
     public class DelagramRepositoryTest
     {
+
         Mock<DelagramContext> mock_context { get; set; }
         DelagramRepository Repo { get; set; }
+
         Mock<DbSet<Post>> mock_post_table { get; set; }
         IQueryable<Post> post_data { get; set; }
         List<Post> post_datasource { get; set; }
+
 
         [TestInitialize]
         public void Initialize()
