@@ -1,4 +1,11 @@
-﻿var app = angular.module("PostApp", []);
+﻿var app = angular.module("PostApp", ["ngRoute"]);
+
+app.config(function ($routeProvider) {
+    $routeProvider.when('/newpost/', {
+        templateUrl: "/api/Angular"
+
+    })
+});
 
 app.controller("PostController", function ($http) {
 
@@ -37,7 +44,7 @@ app.controller("PostController", function ($http) {
     /*self.getPosts() <- returns result of calling of getPosts */
     /*self.getPosts <- reference to function */
     self.getPosts();
-    setInterval(self.getPosts,10000);
+    /*setInterval(self.getPosts,10000);*/
 
     /* (function(){})(); */
 
