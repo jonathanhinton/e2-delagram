@@ -15,3 +15,20 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.red {
+    border: 1px solid red;
+    height: 50px;
+}
+
+
+footer {
+    background-color: grey;
+    position: fixed;
+    height: 60px;
+}
+
+footer button {
+    display: inline-block;
+    height: 60px;
+}
